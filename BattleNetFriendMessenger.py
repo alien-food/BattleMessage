@@ -31,7 +31,7 @@ class Messenger:
 
 
     def BnetMessage(self):
-        # Search for name and type them a message
+        # Search for name
         for letter in self.name:
             pyautogui.hotkey(letter)
         time.sleep(3)
@@ -43,7 +43,8 @@ class Messenger:
         else:
             for i in range(4):
                 pyautogui.hotkey("tab")
-
+        
+        # Type out a message and send it to friend
         pyautogui.hotkey("enter")
         time.sleep(5) 
         for letter in self.msg:
